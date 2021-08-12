@@ -1,9 +1,11 @@
 #include<iostream>
-
+#include<fstream>
+#include "admin.cpp"
 using namespace std;
 
 int main(){
     int choice1 ,ite =0 ;
+    string username ,password ;
     cout <<"\t\tAttendance Management System"<<endl ;
     cout << "Press :-" << endl ;
     cout << "1.Admin Login "<< endl ;
@@ -17,7 +19,13 @@ int main(){
         {
        
         case 1:
-            break;
+            cout<< "Enter Username :- "<< endl ;cin >> username ;
+            cout <<"Enter Password :- "<< endl ;cin>>password ;
+            if(login(username,password)){
+                cout << "Login Success" << endl ;    
+                admin_login();            
+            }
+
         case 2:
             break ;
         case 3:
