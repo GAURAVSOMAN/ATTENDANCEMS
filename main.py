@@ -24,8 +24,8 @@ if __name__ == "__main__" :
             pass 
         elif(choice == 3 ):
             if(student.student_login()):
-                for_clear()
-                print("Login Succesful")
+                student.student_screen()
+                
         elif(choice == 4 ):
             run = False 
         else:
